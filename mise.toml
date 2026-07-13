@@ -1,0 +1,5 @@
+[tasks]
+all = "php artisan serve & cd frontend && npm run dev"
+test = "php artisan test && cd frontend && npm run test && npm run test:e2e"
+lint = "composer lint && cd frontend && npm run lint"
+format = "composer lint && cd frontend && npm run format"
