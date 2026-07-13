@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: center;
     z-index: 200;
+    padding: 1rem;
   }
 
   .confirm-card {
@@ -43,7 +44,7 @@
     border-radius: 8px;
     padding: 1.5rem;
     width: 360px;
-    max-width: 90vw;
+    max-width: 100%;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
 
@@ -78,5 +79,28 @@
   .btn-danger:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    .confirm-overlay {
+      padding: 0;
+      align-items: flex-end;
+    }
+
+    .confirm-card {
+      width: 100%;
+      border-radius: 12px 12px 0 0;
+    }
+
+    .actions {
+      flex-direction: column;
+    }
+
+    .btn-cancel,
+    .btn-danger {
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem;
+    }
   }
 </style>

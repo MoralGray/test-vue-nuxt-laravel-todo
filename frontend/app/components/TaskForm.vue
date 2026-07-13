@@ -144,6 +144,7 @@
     align-items: center;
     justify-content: center;
     z-index: 100;
+    padding: 1rem;
   }
 
   .modal-card {
@@ -151,7 +152,9 @@
     border-radius: 8px;
     padding: 2rem;
     width: 440px;
-    max-width: 90vw;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
 
@@ -220,5 +223,30 @@
   .btn-save:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    .modal-overlay {
+      padding: 0;
+      align-items: flex-end;
+    }
+
+    .modal-card {
+      width: 100%;
+      max-height: 90vh;
+      border-radius: 12px 12px 0 0;
+      padding: 1.5rem;
+    }
+
+    .actions {
+      flex-direction: column;
+    }
+
+    .btn-cancel,
+    .btn-save {
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem;
+    }
   }
 </style>

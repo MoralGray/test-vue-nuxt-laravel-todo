@@ -21,7 +21,7 @@
           {{ loading ? 'Signing in...' : 'Sign In' }}
         </button>
 
-        <button type="button" class="btn btn-guest" @click="guestLogin" :disabled="loading">Guest Enter</button>
+        <button type="button" class="btn btn-guest" @click="guestLogin" :disabled="loading">Admin Enter</button>
       </form>
 
       <p class="switch">Don't have an account? <NuxtLink to="/register">Sign Up</NuxtLink></p>
@@ -64,12 +64,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100dvh;
     background: #f5f5f5;
+    padding: 1rem;
   }
 
   .login-card {
-    width: 360px;
+    width: 100%;
+    max-width: 380px;
     padding: 2rem;
     background: white;
     border-radius: 8px;
@@ -114,7 +116,7 @@
 
   .btn {
     width: 100%;
-    padding: 0.625rem;
+    padding: 0.75rem;
     background: #3182ce;
     color: white;
     border: none;
@@ -144,5 +146,21 @@
   .btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;
+  }
+
+  @media (max-width: 480px) {
+    .login-page {
+      padding: 0;
+    }
+
+    .login-card {
+      max-width: 100%;
+      min-height: 100dvh;
+      border-radius: 0;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 </style>

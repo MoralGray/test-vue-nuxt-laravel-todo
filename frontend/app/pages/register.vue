@@ -78,12 +78,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100dvh;
     background: #f5f5f5;
+    padding: 1rem;
   }
 
   .register-card {
-    width: 360px;
+    width: 100%;
+    max-width: 380px;
     padding: 2rem;
     background: white;
     border-radius: 8px;
@@ -134,7 +136,7 @@
 
   .btn {
     width: 100%;
-    padding: 0.625rem;
+    padding: 0.75rem;
     background: #3182ce;
     color: white;
     border: none;
@@ -159,5 +161,21 @@
     color: #3182ce;
     text-decoration: none;
     font-weight: 600;
+  }
+
+  @media (max-width: 480px) {
+    .register-page {
+      padding: 0;
+    }
+
+    .register-card {
+      max-width: 100%;
+      min-height: 100dvh;
+      border-radius: 0;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 </style>

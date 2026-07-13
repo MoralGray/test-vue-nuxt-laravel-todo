@@ -5,6 +5,7 @@
 <script setup lang="ts">
   definePageMeta({
     middleware: (_to) => {
+      if (import.meta.server) return;
       const auth = useAuthStore();
       auth.init();
       if (auth.isAuthenticated) {

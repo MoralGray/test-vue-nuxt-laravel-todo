@@ -292,12 +292,13 @@
   }
 
   .pagination button {
-    padding: 0.375rem 0.75rem;
+    padding: 0.5rem 1rem;
     border: 1px solid #e2e8f0;
     border-radius: 4px;
     background: white;
     cursor: pointer;
     font-size: 0.875rem;
+    min-width: 80px;
   }
 
   .pagination button:disabled {
@@ -308,5 +309,62 @@
   .page-info {
     font-size: 0.875rem;
     color: #666;
+  }
+
+  @media (max-width: 640px) {
+    .header {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+
+    .header-actions {
+      width: 100%;
+    }
+
+    .btn-primary,
+    .btn-logout {
+      flex: 1;
+      text-align: center;
+      padding: 0.625rem;
+    }
+
+    .main {
+      margin: 1rem auto;
+    }
+
+    .toolbar {
+      flex-direction: column;
+    }
+
+    .filter-select {
+      width: 100%;
+    }
+
+    .task-card {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.5rem;
+    }
+
+    .task-actions {
+      justify-content: flex-end;
+      padding-top: 0.375rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .btn-sm {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+    }
+
+    .pagination {
+      flex-wrap: wrap;
+    }
+
+    .pagination button {
+      flex: 1;
+      max-width: 120px;
+    }
   }
 </style>
