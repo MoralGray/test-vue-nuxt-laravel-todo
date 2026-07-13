@@ -124,22 +124,22 @@
     margin-bottom: 0.5rem;
   }
 
-.btn-guest {
-  background: #38a169;
-}
+  .btn-guest {
+    background: #38a169;
+  }
 
-.switch {
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 0.875rem;
-  color: #666;
-}
+  .switch {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #666;
+  }
 
-.switch a {
-  color: #3182ce;
-  text-decoration: none;
-  font-weight: 600;
-}
+  .switch a {
+    color: #3182ce;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
   .btn:disabled {
     opacity: 0.6;

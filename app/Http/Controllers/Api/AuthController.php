@@ -36,7 +36,7 @@ class AuthController
     {
         $credentials = $request->validated();
 
-        if (!Auth::attempt($credentials)) {
+        if (! Auth::attempt($credentials)) {
             return response()->json([
                 'message' => 'Invalid email or password.',
                 'errors' => [
